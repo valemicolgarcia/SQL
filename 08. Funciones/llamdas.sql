@@ -1,0 +1,1 @@
+CALL p_obtener_juego(7);
