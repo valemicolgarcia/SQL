@@ -1,6 +1,7 @@
+-- PRIMERA ENTREGA 
+
 CREATE DATABASE DBResto;
 USE DBResto;
-
 
 CREATE TABLE Zonas (
     ZonaID INT PRIMARY KEY AUTO_INCREMENT,
@@ -153,6 +154,11 @@ CREATE TABLE Pagos (
     FechaPago DATE NOT NULL,
     FOREIGN KEY (PedidoID) REFERENCES Pedidos(PedidoID)
 );
+
+
+
+
+
 
 
 
