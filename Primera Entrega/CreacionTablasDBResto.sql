@@ -9,6 +9,8 @@ CREATE TABLE Zonas (
     Descripcion VARCHAR(200)
 );
 
+
+
 CREATE TABLE CategoriaPlato (
     CategoriaID INT PRIMARY KEY AUTO_INCREMENT,
     NombreCategoria VARCHAR(100) NOT NULL,
@@ -24,6 +26,7 @@ CREATE TABLE Clientes (
     CantPedidosPasados INT DEFAULT 0
 );
 
+
 --
 
 CREATE TABLE Restaurante (
@@ -35,6 +38,8 @@ CREATE TABLE Restaurante (
     ZonaID INT,
     FOREIGN KEY (ZonaID) REFERENCES Zonas(ZonaID)
 );
+
+
 
 CREATE TABLE Mesas (
     MesaID INT PRIMARY KEY AUTO_INCREMENT,
@@ -89,6 +94,7 @@ CREATE TABLE Reservas (
     FOREIGN KEY (RestauranteID) REFERENCES Restaurante(RestauranteID),
     FOREIGN KEY (MesaID) REFERENCES Mesas(MesaID)
 );
+
 
 CREATE TABLE Opiniones (
     OpinionID INT PRIMARY KEY AUTO_INCREMENT,
@@ -145,6 +151,8 @@ CREATE TABLE Pedidos (
     FOREIGN KEY (RestauranteID) REFERENCES Restaurante(RestauranteID),
     FOREIGN KEY (PlatoID) REFERENCES Platos(PlatoID)
 );
+
+SELECT * FROM Pedidos;
 
 CREATE TABLE Pagos (
     PagoID INT PRIMARY KEY AUTO_INCREMENT,

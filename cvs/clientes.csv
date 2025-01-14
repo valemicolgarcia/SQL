@@ -1,0 +1,4 @@
+ClienteID,Nombre,Email,Telefono,TipoCliente,CantPedidosPasados
+1,"Juan Pérez",juanperez@example.com,123456789,Frecuente,15
+2,"Ana Gómez",anagomez@example.com,987654321,Ocasional,5
+3,"Luis Martínez",luismartinez@example.com,112233445,Nuevo,0

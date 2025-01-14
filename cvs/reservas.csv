@@ -1,0 +1,4 @@
+ReservaID,ClienteID,RestauranteID,MesaID,Fecha,Hora
+1,1,1,2,2024-12-21,20:00:00
+2,2,2,1,2024-12-22,19:00:00
+4,1,4,1,2025-01-14,20:00:00

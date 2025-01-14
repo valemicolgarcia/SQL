@@ -1,0 +1,4 @@
+PedidoID,ClienteID,RestauranteID,PlatoID,Monto,EstadoPedido,FechaPedido
+1,1,1,1,850.00,Entregado,2024-12-19
+2,2,2,2,1200.00,Pendiente,2024-12-20
+3,3,3,3,500.00,Cancelado,2024-12-18

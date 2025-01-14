@@ -1,8 +1,6 @@
 -- SEGUNDA ENTREGA
 USE DBResto;
 
-
-
 -- VISTA 1: muestro las reservas realizadas por cada cliente, incluyendo fecha, restaurante y mesa asignada
 
 CREATE VIEW ReservasPorCliente AS
@@ -63,22 +61,22 @@ WHERE inv.Cantidad < 10;
 SELECT * FROM InventariosBajos;
 
 
--- VISTA 5: Se muestran las promociones vigentes en cd restaurante
+-- VISTA 5: Se muestran los clientes frecuentes con mas cantidad de reservas
 
-CREATE VIEW PromocionesActivas AS
+
+CREATE VIEW ClientesFrecuentes AS
 SELECT 
-    p.Descripcion AS DescripcionPromocion,
-    p.FechaInicio AS FechaInicio,
-    p.FechaFin AS FechaFin,
-    rest.NombreRestaurante AS NombreRestaurante
-FROM Promociones p
-JOIN Restaurante rest ON p.RestauranteID = rest.RestauranteID
-WHERE p.FechaFin >= CURDATE();
-
-SELECT * FROM PromocionesActivas;
-
+    c.Nombre AS NombreCliente,
+    rest.NombreRestaurante AS NombreRestaurante,
+    COUNT(r.ReservaID) AS TotalReservas
+FROM Reservas r
+JOIN Clientes c ON r.ClienteID = c.ClienteID
+JOIN Restaurante rest ON r.RestauranteID = rest.RestauranteID
+GROUP BY c.ClienteID, rest.RestauranteID
+ORDER BY TotalReservas DESC;
 
 
+SELECT * FROM ClientesFrecuentes;
 
 
 
